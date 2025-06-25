@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Figma
+Comment=Figma Web otimizado para Wayland + Hyprland
+Exec=env XDG_SESSION_TYPE=wayland chromium --class=Figma --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,Accelerated2dCanvas,OverlayScrollbar --ozone-platform=wayland --disable-features=TranslateUI,BackgroundNetworking,ExtensionsOnChromeURLs,AudioServiceOutOfProcess --disable-software-rasterizer --enable-gpu-rasterization --disable-gpu-driver-bug-workarounds --disable-dev-shm-usage --disable-breakpad --app=https://www.figma.com
+Icon=figma
+Terminal=false
+Type=Application
+Categories=Graphics;Design;
+StartupWMClass=Figma
+

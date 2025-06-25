@@ -1,0 +1,96 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "monospace 16";
+    location: 0;
+}
+
+* {
+    font: "SF Pro Display, Inter, system-ui, sans-serif 16";
+    bg0: rgba(28, 28, 30, 0.55);
+    bg1: rgba(44, 44, 46, 0.7);
+    bg2: rgba(0, 122, 255, 0.7);
+    fg0: #FFFFFF;
+    fg1: #F2F2F7;
+    fg2: rgba(255, 255, 255, 0.6);
+    bg-items: rgba(28, 28, 30, 0.18);
+    background-color: transparent;
+    text-color: @fg0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    border: 0;
+}
+
+window {
+    background-color: @bg0;
+    location: center;
+    width: 900px;
+    border-radius: 22px;
+    padding: 0;
+    transparency: "real";
+    fullscreen: false;
+    enabled: true;
+    cursor: "default";
+    border: 0;
+}
+
+mainbox {
+    enabled: true;
+    spacing: 0;
+    padding: 2.5em 2.5em 2em 2.5em;
+    orientation: vertical;
+    children: [ listview ];
+    background-color: transparent;
+}
+
+listview {
+    lines: 1;
+    columns: 6;
+    fixed-height: true;
+    border: 0;
+    background-color: transparent;
+    spacing: 2.2em;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    padding: 0;
+}
+
+element {
+    spacing: 0;
+    background-color: @bg-items;
+    text-color: @fg0;
+    cursor: pointer;
+    padding: 0.7em;
+    border-radius: 18px;
+}
+
+element selected normal {
+    background-color: @bg2;
+    text-color: @fg0;
+    border-radius: 18px;
+}
+
+element selected active {
+    background-color: @bg2;
+    text-color: @fg0;
+    border-radius: 18px;
+}
+
+element normal active {
+    text-color: @fg0;
+    background-color: @bg-items;
+}
+
+element alternate active {
+    text-color: @fg0;
+    background-color: @bg-items;
+}
+
+element-icon {
+    size: 13em;
+    background-color: transparent;
+    text-color: inherit;
+    border-radius: 12px;
+}

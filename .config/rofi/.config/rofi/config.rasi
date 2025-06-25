@@ -1,0 +1,135 @@
+/* SPOTLIGHT-LIKE THEME FOR ROFI */
+/* Inspired by macOS Spotlight */
+
+* {
+    font: "SF Pro Display, Inter, system-ui, sans-serif 14";
+    
+    /* Cores principais - Glassmorphism */
+    bg0: rgba(28, 28, 30, 0.6);
+    bg1: rgba(44, 44, 46, 0.7);
+    bg2: rgba(0, 122, 255, 0.7);
+    
+    fg0: #FFFFFF;
+    fg1: #F2F2F7;
+    fg2: rgba(255, 255, 255, 0.6);
+
+    bg-items: rgba(28, 28, 30, 0);
+    
+    background-color: transparent;
+    text-color: @fg0;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+configuration {
+
+    show-icons:                 true;
+}
+
+window {
+    background-color: @bg0;
+    location: center;
+    width: 600px;
+    border-radius: 12px;
+    padding: 0;
+    transparency: "real";
+    fullscreen: false;
+    enabled: true;
+    cursor: "default";
+    border: 0;
+}
+
+mainbox {
+    enabled: true;
+    spacing: 0;
+    padding: 0;
+    orientation: vertical;
+    children: [ inputbar, listview ];
+    background-color: transparent;
+}
+
+inputbar {
+    font: "SF Pro Display, Inter, system-ui, sans-serif 18";
+    padding: 20px 24px 16px 24px;
+    spacing: 12px;
+    children: [ icon-search, entry ];
+    background-color: transparent;
+}
+
+icon-search {
+    expand: false;
+    filename: "search";
+    size: 40px;
+    text-color: @fg0;
+}
+
+icon-search, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+entry {
+    font: inherit;
+    placeholder: "Spotlight Search";
+    placeholder-color: @fg2;
+    background-color: transparent;
+    text-color: @fg0;
+    cursor: text;
+    padding: 0;
+}
+
+message {
+    border: 0;
+    background-color: transparent;
+}
+
+textbox {
+    padding: 8px 24px;
+    background-color: transparent;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    border: 0;
+    background-color: transparent;
+    spacing: 0;
+    padding: 0;
+
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+}
+
+element {
+    padding: 12px 24px;
+    spacing: 16px;
+    background-color: @bg-items;
+    text-color: @fg0;
+    cursor: pointer;
+}
+
+element normal active {
+    text-color: @fg0;
+    background-color: @bg-items;
+}
+
+element alternate active {
+    text-color: @fg0;
+    background-color: @bg-items;
+}
+
+element selected normal, element selected active {
+    background-color: @bg2;
+    text-color: @fg0;
+    margin: 0 8px;
+}
+
+element-icon {
+    size: 2em;
+    background-color: transparent;
+    text-color: inherit;
+}
+
